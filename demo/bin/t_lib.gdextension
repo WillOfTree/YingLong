@@ -1,0 +1,35 @@
+[configuration]
+
+entry_symbol = "tree_game_library_init"
+compatibility_minimum = "4.1"
+
+[libraries]
+
+
+macos.debug = ""
+macos.release = ""
+
+
+ios.debug = ""
+ios.release = ""
+
+
+windows.debug.x86_32 = ""
+windows.release.x86_32 = ""
+windows.debug.x86_64 = "res://bin/libcpp.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://bin/libcpp.windows.template_debug.x86_64.dll"
+
+
+linux.debug.x86_64 = ""
+linux.release.x86_64 = ""
+linux.debug.arm64 = ""
+linux.release.arm64 = ""
+linux.debug.rv64 = ""
+linux.release.rv64 = ""
+
+
+android.release.x86_32 = "res://bin/android/lib.android.template_release.x86_32.so"
+android.release.x86_64 = "res://bin/android/lib.android.template_release.x86_64.so"
+
+android.release.arm32 = "res://bin/android/lib.android.template_release.arm32.so"
+android.release.arm64 = "res://bin/android/lib.android.template_debug.arm64.so"
