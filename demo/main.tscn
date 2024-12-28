@@ -1,0 +1,368 @@
+[gd_scene load_steps=25 format=3 uid="uid://bibh88ct4e0yu"]
+
+[ext_resource type="Texture2D" uid="uid://r2mr6go1nrnl" path="res://assets/遇事不决莽一下 (2).png" id="1_3nner"]
+[ext_resource type="FontFile" uid="uid://dciu6erbndiwb" path="res://assets/方正楷体简体.ttf" id="2_gqcsp"]
+[ext_resource type="Script" path="res://script_node.gd" id="4_lggoe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kj7va"]
+texture = ExtResource("1_3nner")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_omj3h"]
+
+[sub_resource type="Theme" id="Theme_g58h5"]
+default_font = ExtResource("2_gqcsp")
+
+[sub_resource type="Theme" id="Theme_8iufy"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_r4ccq"]
+default_font_size = 80
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fc16k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7sgl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_agrj6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76apb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qthr"]
+
+[sub_resource type="Theme" id="Theme_0yepg"]
+default_font = ExtResource("2_gqcsp")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2dx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hc70y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjhdd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0s7xi"]
+
+[sub_resource type="Animation" id="Animation_ksnbp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/StartPanel/Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kmvlp"]
+resource_name = "content_disappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/PanelContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_shpxr"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/StartPanel/Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v8plj"]
+resource_name = "new_animation_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/PanelContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1j4as"]
+resource_name = "title_display"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/StartPanel/Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hy00r"]
+_data = {
+"RESET": SubResource("Animation_ksnbp"),
+"content_disappear": SubResource("Animation_kmvlp"),
+"new_animation": SubResource("Animation_shpxr"),
+"new_animation_2": SubResource("Animation_v8plj"),
+"title_display": SubResource("Animation_1j4as")
+}
+
+[node name="main" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kj7va")
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_omj3h")
+
+[node name="Content" type="MarginContainer" parent="UI/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_g58h5")
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer/Content"]
+layout_mode = 2
+theme = SubResource("Theme_8iufy")
+
+[node name="title" type="HBoxContainer" parent="UI/PanelContainer/Content/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_r4ccq")
+
+[node name="mark" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/title"]
+layout_mode = 2
+text = "䷺ "
+
+[node name="text" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/title"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "乾"
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer/Content/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "/
+/"
+
+[node name="Label3" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☰
+乾"
+
+[node name="Label2" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☱
+兑"
+
+[node name="Label4" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☲
+离"
+
+[node name="Label5" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☳
+震"
+
+[node name="Label6" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☴
+巽"
+
+[node name="Label7" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☵
+坎"
+
+[node name="Label8" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☶
+艮"
+
+[node name="Label9" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "☷
+坤"
+
+[node name="Label10" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "/
+/"
+
+[node name="other" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="UI/PanelContainer/Content/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+border_color = Color(0.982343, 0.982342, 0.982342, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="Content" type="MarginContainer" parent="UI/PanelContainer/Content/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer/Content/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="title" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "乾：元亨利贞"
+autowrap_mode = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+layout_mode = 2
+border_color = Color(0.765283, 0.831682, 0.973041, 1)
+editor_only = false
+
+[node name="one" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "大师傅大师傅但是"
+autowrap_mode = 1
+
+[node name="two" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="three" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="four" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="five" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="six" type="Label" parent="UI/PanelContainer/Content/VBoxContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+autowrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PanelContainer/Content/VBoxContainer"]
+custom_minimum_size = Vector2(130, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+
+[node name="Button" type="Button" parent="UI/PanelContainer/Content/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fc16k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_y7sgl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_agrj6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_76apb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2qthr")
+text = "返回"
+
+[node name="StartPanel" type="PanelContainer" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0yepg")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g2dx2")
+
+[node name="Button" type="Button" parent="UI/StartPanel"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hc70y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xjhdd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0s7xi")
+
+[node name="Label" type="Label" parent="UI/StartPanel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "趋吉避凶 逢凶化吉"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="JsonLoadManager" type="JsonLoadManager" parent="."]
+
+[node name="ScriptNode" type="Node" parent="."]
+script = ExtResource("4_lggoe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_hy00r")
+}
+
+[connection signal="button_down" from="UI/PanelContainer/Content/VBoxContainer/HBoxContainer/Button" to="ScriptNode" method="_on_button_down_return"]
+[connection signal="button_down" from="UI/StartPanel/Button" to="ScriptNode" method="_on_button_button_down"]
