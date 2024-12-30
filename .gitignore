@@ -1,2 +1,7 @@
+# Godot 4+ specific ignores
+./demo/godot/
+./demo/android/
+./demo/script/json/
 SConstruct
-demo\script\json
+./demo/script/json/
+./bin/*.apk

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bibh88ct4e0yu"]
+[gd_scene load_steps=28 format=3 uid="uid://bibh88ct4e0yu"]
 
 [ext_resource type="Texture2D" uid="uid://r2mr6go1nrnl" path="res://assets/遇事不决莽一下 (2).png" id="1_3nner"]
 [ext_resource type="FontFile" uid="uid://dciu6erbndiwb" path="res://assets/方正楷体简体.ttf" id="2_gqcsp"]
@@ -38,6 +38,15 @@ default_font = ExtResource("2_gqcsp")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjhdd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0s7xi"]
+
+[sub_resource type="Theme" id="Theme_7fdr7"]
+default_font = ExtResource("2_gqcsp")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uo7mw"]
+
+[sub_resource type="Theme" id="Theme_f8lr7"]
+default_font = ExtResource("2_gqcsp")
+default_font_size = 30
 
 [sub_resource type="Animation" id="Animation_ksnbp"]
 length = 0.001
@@ -352,6 +361,54 @@ theme_override_font_sizes/font_size = 100
 text = "趋吉避凶 逢凶化吉"
 horizontal_alignment = 1
 autowrap_mode = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_7fdr7")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uo7mw")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_f8lr7")
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label2" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+text = "神之灵矣，感而遂通。"
+autowrap_mode = 1
+
+[node name="Label" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+text = "天何言哉！叩之即应。"
+autowrap_mode = 1
+
+[node name="Label3" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+text = "《卜筮正宗》曰"
+autowrap_mode = 1
+
+[node name="Label4" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
 
 [node name="JsonLoadManager" type="JsonLoadManager" parent="."]
 
