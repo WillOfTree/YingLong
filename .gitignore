@@ -1,8 +1,7 @@
 # Godot 4+ specific ignores
-./demo/.godot/
-./demo/android/
-./demo/script/json/
-SConstruct
-./demo/script/json/
-./bin/*.apk
-./bin/*.idsig
+demo/.godot/
+demo/android/
+demo/script/json/
+demo/bin/*
+bin/*.apk
+bin/*.idsig
