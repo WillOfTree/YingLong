@@ -1,5 +1,5 @@
 # Godot 4+ specific ignores
-./demo/godot/
+./demo/.godot/
 ./demo/android/
 ./demo/script/json/
 SConstruct
