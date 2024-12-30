@@ -7,6 +7,10 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kj7va"]
 texture = ExtResource("1_3nner")
 
+[sub_resource type="Theme" id="Theme_f8lr7"]
+default_font = ExtResource("2_gqcsp")
+default_font_size = 30
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_omj3h"]
 
 [sub_resource type="Theme" id="Theme_g58h5"]
@@ -39,15 +43,6 @@ default_font = ExtResource("2_gqcsp")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0s7xi"]
 
-[sub_resource type="Theme" id="Theme_7fdr7"]
-default_font = ExtResource("2_gqcsp")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uo7mw"]
-
-[sub_resource type="Theme" id="Theme_f8lr7"]
-default_font = ExtResource("2_gqcsp")
-default_font_size = 30
-
 [sub_resource type="Animation" id="Animation_ksnbp"]
 length = 0.001
 tracks/0/type = "value"
@@ -73,6 +68,102 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/t:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/one:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/two:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/three:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/four:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/five:visible_ratio")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/six:visible_ratio")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("UI/zuci:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_kmvlp"]
@@ -135,10 +226,116 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_qhfvv"]
+resource_name = "daoci_start"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/t:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/one:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/two:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/three:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/four:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5.5, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/five:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7, 8.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("UI/zuci/VBoxContainer/HBoxContainer/six:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(8.5, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_salek"]
+resource_name = "daoci_hide"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/zuci:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hy00r"]
 _data = {
 "RESET": SubResource("Animation_ksnbp"),
 "content_disappear": SubResource("Animation_kmvlp"),
+"daoci_hide": SubResource("Animation_salek"),
+"daoci_start": SubResource("Animation_qhfvv"),
 "new_animation": SubResource("Animation_shpxr"),
 "new_animation_2": SubResource("Animation_v8plj"),
 "title_display": SubResource("Animation_1j4as")
@@ -155,6 +352,91 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_kj7va")
+
+[node name="zuci" type="MarginContainer" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_f8lr7")
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/zuci"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/zuci/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="six" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "惟神惟灵，望垂昭报。"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="five" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "若可若否，尚明告之。"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="four" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "罔知休咎，罔释厥疑。"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="three" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "今有某人某事。"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="two" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "神之灵矣，感而遂通。"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="one" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "天何言哉！叩之即应。"
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="t" type="Label" parent="UI/zuci/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "增删卜易曰："
+autowrap_mode = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="PanelContainer" type="PanelContainer" parent="UI"]
 modulate = Color(1, 1, 1, 0)
@@ -361,54 +643,6 @@ theme_override_font_sizes/font_size = 100
 text = "趋吉避凶 逢凶化吉"
 horizontal_alignment = 1
 autowrap_mode = 1
-
-[node name="PanelContainer2" type="PanelContainer" parent="UI"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-theme = SubResource("Theme_7fdr7")
-theme_override_styles/panel = SubResource("StyleBoxEmpty_uo7mw")
-
-[node name="MarginContainer" type="MarginContainer" parent="UI"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_f8lr7")
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 80
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="Label2" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(35, 0)
-layout_mode = 2
-text = "神之灵矣，感而遂通。"
-autowrap_mode = 1
-
-[node name="Label" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(35, 0)
-layout_mode = 2
-text = "天何言哉！叩之即应。"
-autowrap_mode = 1
-
-[node name="Label3" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(35, 0)
-layout_mode = 2
-text = "《卜筮正宗》曰"
-autowrap_mode = 1
-
-[node name="Label4" type="Label" parent="UI/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
 
 [node name="JsonLoadManager" type="JsonLoadManager" parent="."]
 

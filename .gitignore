@@ -5,3 +5,4 @@
 SConstruct
 ./demo/script/json/
 ./bin/*.apk
+./bin/*.idsig

@@ -6,6 +6,7 @@ extends Node
 @onready var other_position = %other
 @onready var title_position = %title
 @onready var content_positon = %Content
+@onready var zuci_position = %zuci
 
 # 页面
 @onready var start_panel = %StartPanel
@@ -23,10 +24,10 @@ func _ready() -> void:
 
 # 开始屏幕按钮按下
 func _on_button_button_down() -> void:
-	# 动画
 	animation.play("new_animation") # 隐藏开始屏幕动画
 	await  animation.animation_finished
-	animation.play("new_animation_2") # 显示主页面动画
+	# 动画
+	_start_animation()
 	
 	# 按钮隐藏，不可点
 	start_panel.hide();
@@ -55,10 +56,38 @@ func _on_button_button_down() -> void:
 	
 	
 func _on_button_down_return() -> void:
-	#print("xxxxxxxx")
 	start_panel.show()
 	
 	animation.play("content_disappear")
 	await animation.animation_finished
 	animation.play("title_display")
+	
+	_zuci_animation() # 还原
+	pass
+	
+	
+# 点击屏幕的动画
+func _start_animation() -> void:
+	animation.play("daoci_start") # 显示祷词动画
+	await animation.animation_finished
+	animation.play("daoci_hide") # 祷词隐藏
+	await animation.animation_finished
+
+	animation.play("new_animation_2") # 显示内容面动画
+	pass
+	
+	
+func _zuci_animation() -> void:
+	# 设置zuci可见
+	zuci_position.set_modulate(Color(255,255,255,1))
+	# 
+	zuci_position.get_node("VBoxContainer/HBoxContainer/t").set_visible_ratio(0)
+	zuci_position.get_node("VBoxContainer/HBoxContainer/one").set_visible_ratio(0)
+	zuci_position.get_node("VBoxContainer/HBoxContainer/two").set_visible_ratio(0)
+	zuci_position.get_node("VBoxContainer/HBoxContainer/three").set_visible_ratio(0)
+	zuci_position.get_node("VBoxContainer/HBoxContainer/four").set_visible_ratio(0)
+	zuci_position.get_node("VBoxContainer/HBoxContainer/five").set_visible_ratio(0)
+	zuci_position.get_node("VBoxContainer/HBoxContainer/six").set_visible_ratio(0)
+
+	
 	pass
